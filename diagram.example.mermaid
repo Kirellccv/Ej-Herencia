@@ -1,0 +1,24 @@
+classDiagram
+    class Animal {
+        #String nombre
+        #int edad
+        +Animal(nombre: String, edad: int)
+        +comer()
+        +mostrarInfo()
+    }
+    
+    class Perro {
+        -String raza
+        +Perro(nombre: String, edad: int, raza: String)
+        +ladrar()
+        +mostrarInfo()
+    }
+    
+    Animal <|-- Perro : hereda de
+    
+    class EjemploHerencia {
+        +main(args: String[])
+    }
+    
+    EjemploHerencia ..> Animal : crea
+    EjemploHerencia ..> Perro : crea
